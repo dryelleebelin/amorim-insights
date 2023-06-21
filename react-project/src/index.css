@@ -35,7 +35,6 @@
   padding: 0;
   margin: 0;
   font-family: var(--body-font);
-  color: var(--black-color);
 }
 
 input, button {
@@ -52,7 +51,6 @@ h1{
   font-size: var(--h1-font-size);
   font-weight: 800;
   color: var(--yellow-color);
-  
 }
 
 h2{
@@ -72,6 +70,7 @@ p{
   align-items: center;
   padding: 2% 0;
   background-color: var(--body-color);
+  color: var(--black-color);
 }
 
 .logotipo-principal{
@@ -95,7 +94,7 @@ p{
   max-width: 80%;
   display: flex;
   justify-content: space-around;
-  padding: 3% 0;
+  padding: 4% 0 2% 0;
   gap: 2%;
 }
 
@@ -111,6 +110,103 @@ p{
   margin-bottom: 5%;
 }
 
+.argumentos-convencimento div:first-child{
+  width: 25%;
+  height: 80%;
+  margin-top: 1%;
+}
+
+.hotmart{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botao-hotmart{
+  background-color: #46b21e;
+  color: var(--white-color);
+  padding: 2% 0;
+  width: 50rem;
+  margin: 2.2rem 0 0.9rem 0;
+  font-size: var(--h1-font-size);
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.511);
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.511);
+  transition: 0.3s ease-in;
+}
+
+.botao-hotmart:hover{
+  background-color: #2f7615;
+}
+
+.formas-pagamento{
+  width: 35%;
+}
+
+.tabela{
+  border-collapse: collapse;
+  margin: 3% 0 0 0;
+  width: 60%;
+  text-align: center;
+}
+
+.tabela th, td{
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.tabela-outro svg{
+  width: 40px;
+  height: 25px;
+  color: #ff0000 !important;
+  position: absolute;
+  left: 355px;
+}
+
+.tabela img{
+  width: 110px;
+}
+
+.whatsapp{
+  margin: 4% 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--container-color);
+}
+
+.whatsapp p{
+  width: 60%;
+  text-align: center;
+}
+
+.whatsapp button{
+  background-color: #46b21e;
+  color: var(--white-color);
+  padding: 0.5rem 0;
+  width: 35rem;
+  margin: 1rem 0 0 0;
+  font-size: var(--h1-font-size);
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.511);
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.511);
+  transition: 0.3s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+}
+
+.whatsapp button:hover{
+  background-color: #2f7615;
+}
+
+/*
 .pagamento{
   padding: 2% 0 0 0;
 }
@@ -141,7 +237,7 @@ p{
   font-weight: 800;
 }
 
-.plataforma-hotmart{
+.plataforma-hotmart2{
   width: 100%;
   display: flex;
   justify-content: center;
@@ -167,9 +263,10 @@ p{
   font-size: 0.8rem;
 }
 
-.formas-pagamento{
+.formas-pagamento2{
   margin-top: 0.2rem;
 }
+*/
 
 .h1{
   padding: 4% 0 1% 0;
@@ -265,7 +362,7 @@ p{
 }
 
 .diagrama svg{
-  width: 35%;
+  width: 40%;
   height: 100%;
 }
 
@@ -286,8 +383,9 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 5%;
+  padding-bottom: 4%;
   margin: 4% 0 2% 0;
+  width: 100%;
 }
 
 .garantia-h1, .garantia-p{
@@ -322,12 +420,12 @@ p{
 .sobre-mim{
   background-color: var(--container-color);
   display: flex;
-  height: 70vh;
+  height: 80vh;
   padding: 4%;
   margin: 6% 0 2% 0;
 }
 
-.sobre-mim div{
+.conteudo{
   display: flex;
   flex-direction: column;
   background-color: var(--container-color);
@@ -349,22 +447,50 @@ p{
   width: 80%;
 }
 
+.conteudo div{
+  display: flex;
+  margin-top: 3%;
+  gap: 2%;
+}
+
+.conteudo div img{
+  width: 10%;
+}
+
 .lucas{
   height: 100%;
   background-color: var(--white-color);
+}
+
+.add1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1% 0 2% 0;
+}
+
+.add1 p{
+  width: 50%;
 }
 
 .footer{
   display: flex;
   justify-content: space-between;
   width: 95%;
-  padding: 1%;
+  margin-top: 0;
+  padding: 2% 0 1% 0;
+}
+
+.footer img{
+  width: 12%;
+  max-width: max-content;
 }
 
 .footer-contato{
   display: flex;
   align-items: center;
-  width: 40%;
+  gap: 5%;
 }
 
 .footer-contato a{
@@ -377,11 +503,12 @@ p{
 }
 
 .footer-contato svg{
-  width: 1.5rem;
+  width: 1.7rem;
   height: 100%;
+  color: var(--black-color);
 }
 
-.footer div:nth-child(2){
+.footer div:nth-child(3){
   text-align: end;
 }
 
