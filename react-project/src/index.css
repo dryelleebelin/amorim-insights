@@ -25,9 +25,9 @@
   --white-color: #f1f2f3;
   --gray-color: #939393;
 
-  --h1-font-size: 1.7rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
+  --h1-font-size: 2.3rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.1rem;
 }
 
 *{
@@ -42,7 +42,7 @@ input, button {
   border: none;
 }
 
-a {
+a, button {
   cursor: pointer;
   text-decoration: none;
 }
@@ -51,11 +51,15 @@ h1{
   font-size: var(--h1-font-size);
   font-weight: 800;
   color: var(--yellow-color);
+  padding: 4% 0 1% 0;
+  width: 45%;
+  text-align: center;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.511);
 }
 
 h2{
   font-size: var(--h2-font-size);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 p{
@@ -75,61 +79,46 @@ p{
 
 .logotipo-principal{
   width: 15%;
-  max-width: max-content;
   padding-bottom: 2%;
 }
 
-.instrucao-video-principal{
-  padding: 2% 0;
-}
-
-.video-principal{
-  width: 70vw;
-  height: 82vh;
-  border-radius: 0.8rem;
-}
-
-.argumentos-convencimento{
-  width: 57%;
-  max-width: 80%;
-  display: flex;
-  justify-content: space-around;
-  padding: 4% 0 2% 0;
-  gap: 2%;
-}
-
-.argumentos-convencimento div{
+.headline{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 3%;
 }
 
-.argumentos-convencimento div svg{
-  width: 25%;
-  height: 80%;
-  margin-bottom: 5%;
+.headline h2{
+  font-size: 1.9rem;
 }
 
-.argumentos-convencimento div:first-child{
-  width: 25%;
-  height: 80%;
-  margin-top: 1%;
+.headline p{
+  font-size: 1.3rem;
+  width: 80%;
+  text-align: center;
 }
 
-.hotmart{
+.video-principal{
+  width: 75vw;
+  height: 82vh;
+  border-radius: 1.2rem;
+}
+
+.botao-hotmart{
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.botao-hotmart{
+.botao-hotmart button{
   background-color: #46b21e;
   color: var(--white-color);
   padding: 2% 0;
   width: 50rem;
   margin: 2.2rem 0 0.9rem 0;
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
   font-weight: 800;
   border-radius: 10px;
   cursor: pointer;
@@ -138,12 +127,39 @@ p{
   transition: 0.3s ease-in;
 }
 
-.botao-hotmart:hover{
+.botao-hotmart button:hover{
   background-color: #2f7615;
 }
 
-.formas-pagamento{
+.botao-hotmart img{
   width: 35%;
+}
+
+.badges{
+  width: 57%;
+  max-width: 80%;
+  display: flex;
+  justify-content: space-around;
+  padding: 4% 0 2% 0;
+  gap: 2%;
+}
+
+.badges div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badges div svg{
+  width: 25%;
+  height: 80%;
+  margin-bottom: 5%;
+}
+
+.badges div:first-child{
+  width: 25%;
+  height: 80%;
+  margin-top: 1%;
 }
 
 .tabela{
@@ -158,7 +174,7 @@ p{
   padding: 8px;
 }
 
-.tabela-outro svg{
+.tabela tr th svg{
   width: 40px;
   height: 25px;
   color: #ff0000 !important;
@@ -170,253 +186,6 @@ p{
   width: 110px;
 }
 
-.whatsapp{
-  margin: 4% 0 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--container-color);
-}
-
-.whatsapp p{
-  width: 60%;
-  text-align: center;
-}
-
-.whatsapp button{
-  background-color: #46b21e;
-  color: var(--white-color);
-  padding: 0.5rem 0;
-  width: 35rem;
-  margin: 1rem 0 0 0;
-  font-size: var(--h1-font-size);
-  font-weight: 800;
-  border-radius: 10px;
-  cursor: pointer;
-  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.511);
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.511);
-  transition: 0.3s ease-in;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2%;
-}
-
-.whatsapp button:hover{
-  background-color: #2f7615;
-}
-
-/*
-.pagamento{
-  padding: 2% 0 0 0;
-}
-
-.pagamento p{
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.pagamento div{
-  display: flex;
-}
-
-.pagamento div h2{
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-right: 5%;
-}
-
-.pagamento div h1{
-  font-size: 3.2rem;
-  font-weight: 800;
-  color: var(--black-color);
-  margin-top: 5%;
-}
-
-.pagamento span{
-  font-weight: 800;
-}
-
-.plataforma-hotmart2{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 0.6rem 0;
-}
-
-.botao-pagamento{
-  background-color: var(--black-color);
-  color: var(--white-color);
-  font-size: var(--h2-font-size);
-  padding: 0.5% 4.5%;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  transition: 0.2s ease-in;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.511);
-}
-
-.botao-pagamento:hover{
-  background-color: #232323e0;
-}
-
-.span-pagamento{
-  font-size: 0.8rem;
-}
-
-.formas-pagamento2{
-  margin-top: 0.2rem;
-}
-*/
-
-.h1{
-  padding: 4% 0 1% 0;
-  width: 45%;
-  text-align: center;
-  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.511);
-}
-
-.h2{
-  width: 60%;
-  text-align: center;
-}
-
-.relatos{
-  display: flex;
-  width: 75%;
-  max-width: 75%;
-  margin-left: 8%;
-  padding-top: 2%;
-}
-
-.relato{
-  display: flex;
-}
-
-.relato svg{
-  width: 40%;
-  max-width: 40%;
-  height: 70%;
-}
-
-.relato div p{
-  width: 80%;
-}
-
-.veiculos{
-  display: flex;
-  width: 100%;
-  height: 60vh;
-  gap: 0.6%;
-  margin: 7% 0 0 0;
-  padding: 0 2%;
-}
-
-.veiculo-1{
-  background-color: var(--container-color);
-  width: 30%;
-  max-width: 30%;
-}
-
-.veiculos div{
-  width: 20%;
-}
-
-.veiculo-2{
-  background-color: var(--container-color);
-  height: 49%;
-  margin-bottom: 3%;
-}
-
-.veiculo-3{
-  background-color: var(--container-color);
-  height: 49%;
-}
-
-.veiculo-4{
-  background-color: var(--container-color);
-  width: 50%;
-  max-width: 50%;
-}
-
-.argumento-logico{
-  display: flex;
-  width: 70%;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.argumento-logico svg{
-  width: 50%;
-  height: 100%;
-}
-
-.argumento-logico h1{
-  color: var(--black-color);
-  width: 40%;
-}
-
-.diagrama{
-  width: 80%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.diagrama svg{
-  width: 40%;
-  height: 100%;
-}
-
-.etapa-aprendizado{
-  display: flex;
-  width: 50%;
-  padding-top: 2%;
-}
-
-.etapa-aprendizado svg{
-  width: 35%;
-  height: 100%;
-  margin-right: 2%;
-}
-
-.garantia{
-  background-color: var(--container-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 4%;
-  margin: 4% 0 2% 0;
-  width: 100%;
-}
-
-.garantia-h1, .garantia-p{
-  background-color: var(--container-color);
-}
-
-.garantia-h1{
-  padding: 4% 0 1% 0;
-  width: 45%;
-  text-align: center;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.511);
-}
-
-.garantia-p{
-  color: var(--white-color);
-  width: 60%;
-  text-align: center;
-}
-
-.bonus{
-  display: flex;
-  width: 50%;
-  padding-top: 2%;
-}
-
-.bonus svg{
-  width: 35%;
-  height: 100%;
-  margin-right: 2%;
-}
-
 .sobre-mim{
   background-color: var(--container-color);
   display: flex;
@@ -425,35 +194,35 @@ p{
   margin: 6% 0 2% 0;
 }
 
-.conteudo{
+.sobre-mim-texto{
   display: flex;
   flex-direction: column;
   background-color: var(--container-color);
   width: 100%;
 }
 
-.sobre-mim-h1{
+.sobre-mim-texto h1{
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.511);
 }
 
-.sobre-mim-h1, .sobre-mim-p{
+.sobre-mim-texto h1, .sobre-mim-texto p{
   background-color: var(--container-color);
   color: var(--white-color);
   
 }
 
-.sobre-mim-p{
+.sobre-mim-texto p{
   padding-top: 2%;
   width: 80%;
 }
 
-.conteudo div{
+.certificados{
   display: flex;
   margin-top: 3%;
   gap: 2%;
 }
 
-.conteudo div img{
+.sobre-mim-texto div img{
   width: 10%;
 }
 
@@ -462,7 +231,7 @@ p{
   background-color: var(--white-color);
 }
 
-.add1{
+.bonus{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -470,8 +239,20 @@ p{
   margin: 1% 0 2% 0;
 }
 
-.add1 p{
+.bonus p{
   width: 50%;
+}
+
+.faq-item{
+  display: flex;
+  width: 50%;
+  padding-top: 2%;
+}
+
+.faq-item svg{
+  width: 35%;
+  height: 100%;
+  margin-right: 2%;
 }
 
 .footer{
@@ -513,7 +294,13 @@ p{
 }
 
 
-/* para celular */
+
+
+
+
+
+
+/* responsividade */
 @media screen and (max-width: 515px){
   :root {
     --h1-font-size: 1.3rem;
