@@ -16,7 +16,7 @@
 }
 
 :root {
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Poppins", sans-serif !important;
 
   --body-color: #f1f2f3;
   --container-color: #232323;
@@ -72,9 +72,25 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2% 0;
+  padding: 2% 0 0 0;
   background-color: var(--body-color);
   color: var(--black-color);
+}
+
+
+.whatsapp{
+  position: fixed;
+  bottom: 4%;
+  right: 2.5%;
+}
+
+.whatsapp img{
+  width: 50px;
+  transition: 0.2s ease-in;
+}
+
+.whatsapp img:hover{
+  transform: scale(1.1);
 }
 
 .logotipo-principal{
@@ -102,7 +118,7 @@ p{
 .video-principal{
   width: 75vw;
   height: 82vh;
-  border-radius: 1.2rem;
+  border-radius: 1rem;
 }
 
 .botao-hotmart{
@@ -117,7 +133,7 @@ p{
   color: var(--white-color);
   padding: 2% 0;
   width: 50rem;
-  margin: 2.2rem 0 0.9rem 0;
+  margin: 2.9rem 0 0.9rem 0;
   font-size: var(--h2-font-size);
   font-weight: 800;
   border-radius: 10px;
@@ -157,16 +173,17 @@ p{
 }
 
 .badges div:first-child{
-  width: 25%;
+  width: 30%;
   height: 80%;
   margin-top: 1%;
 }
 
 .tabela{
   border-collapse: collapse;
-  margin: 3% 0 0 0;
+  margin: 3% 0 5% 2%;
   width: 60%;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .tabela th, td{
@@ -179,41 +196,80 @@ p{
   height: 25px;
   color: #ff0000 !important;
   position: absolute;
-  left: 355px;
+  left: 370px;
 }
 
 .tabela img{
   width: 110px;
 }
 
+.carossel{
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+}
+
+.carossel-item{
+  width: 18rem;
+  height: 20rem;
+  background-color: var(--yellow-color);
+  border-radius: 12px;
+  padding: 1.7%;
+}
+
+.carossel-item h2{
+  width: 80%;
+  margin-left: 17%;
+  margin-bottom: 9%;
+}
+
+.carossel-item span p{
+  background-color: var(--container-color);
+  color: var(--white-color);
+  padding: 5%;
+  font-size: 0.9rem;
+}
+
+.carossel-item span p:first-child{
+  padding-bottom: 0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-weight: 600;
+}
+
+.carossel-item span p:last-child{
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 9.5rem;
+  max-height: 9.5rem;
+}
+
 .sobre-mim{
   background-color: var(--container-color);
   display: flex;
   height: 80vh;
-  padding: 4%;
+  padding: 4% 4% 3% 6%;
   margin: 6% 0 2% 0;
 }
 
 .sobre-mim-texto{
   display: flex;
   flex-direction: column;
-  background-color: var(--container-color);
-  width: 100%;
+  width: 70%;
 }
 
 .sobre-mim-texto h1{
+  width: 70%;
+  text-align: start;
+  padding: 0;
+  color: var(--yellow-color) !important;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.511);
 }
 
-.sobre-mim-texto h1, .sobre-mim-texto p{
-  background-color: var(--container-color);
-  color: var(--white-color);
-  
-}
-
 .sobre-mim-texto p{
+  color: var(--white-color);
   padding-top: 2%;
-  width: 80%;
+  width: 95%;
 }
 
 .certificados{
@@ -222,13 +278,13 @@ p{
   gap: 2%;
 }
 
-.sobre-mim-texto div img{
+.certificados img{
   width: 10%;
 }
 
 .lucas{
+  width: 29%;
   height: 100%;
-  background-color: var(--white-color);
 }
 
 .bonus{
@@ -236,31 +292,72 @@ p{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 1% 0 2% 0;
+  margin: 1% 0;
+}
+
+.bonus h1{
+  padding: 0;
 }
 
 .bonus p{
   width: 50%;
+  font-size: 1.2rem;
+}
+
+.faq{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .faq-item{
   display: flex;
-  width: 50%;
+  align-items: center;
+  width: 60%;
+  margin-left: 5%;
   padding-top: 2%;
 }
 
 .faq-item svg{
-  width: 35%;
+  width: 12%;
   height: 100%;
   margin-right: 2%;
+}
+
+.faq-item div{
+  width: 88%;
+}
+
+.discord{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 0;
+}
+
+.discord img{
+  width: 15%;
+}
+
+.discord h2{
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 1% 0;
+}
+
+.discord video{
+  width: 65vw;
+  border-radius: 0.8rem;
 }
 
 .footer{
   display: flex;
   justify-content: space-between;
-  width: 95%;
-  margin-top: 0;
-  padding: 2% 0 1% 0;
+  color: var(--white-color);
+  background-color: var(--container-color);
+  align-items: center;
+  padding: 3% 10% 2.5% 3%;
 }
 
 .footer img{
@@ -271,7 +368,7 @@ p{
 .footer-contato{
   display: flex;
   align-items: center;
-  gap: 5%;
+  gap: 7%;
 }
 
 .footer-contato a{
@@ -283,10 +380,10 @@ p{
   transform: translateY(-4px);
 }
 
-.footer-contato svg{
-  width: 1.7rem;
+.footer-contato a svg{
+  width: 1.8rem;
   height: 100%;
-  color: var(--black-color);
+  color: var(--white-color);
 }
 
 .footer div:nth-child(3){
