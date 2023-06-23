@@ -1,4 +1,5 @@
 import './index.css';
+import Carousel from './Carousel';
 
 import logotipoPrincipal from './assets/logotipo-principal.png';
 import lucas from './assets/lucas-removebg.png';
@@ -14,6 +15,20 @@ import { IoClose } from 'react-icons/io5';
 import whatsapp from './assets/whatsapp.png';
 import discord from './assets/discord.png';
 // import videoDiscord from './assets/video-discord.mp4';
+
+import excel1 from './assets/Excel 1.png';
+import excel2 from './assets/Excel 2.png';
+import powerbi1 from './assets/Power BI 1.png';
+import powerbi2 from './assets/Power BI 2.png';
+
+import modulo1 from './assets/MÓDULO 01 - O QUE É BI E POWER BI.png';
+import modulo2 from './assets/MÓDULO 02 - SAIBA TRATAR O SEUS DADOS.png';
+import modulo3 from './assets/MÓDULO 03 - MODELAGEM DE DADOS.png';
+import modulo4 from './assets/MÓDULO 04 - KPIS NO DAX.png';
+import modulo5 from './assets/MÓDULO 05 - HORA DE IMPRESSIONAR COM OS GRÁFICOS.png';
+import modulo6 from './assets/MÓDULO 06 - TUDO SOBRE POWER BI SERVIÇO.png';
+import moduloBonus from './assets/AULAS BÔNUS .png';
+import moduloLives from './assets/LIVES TIRA DÚVIDAS.png';
 
 import certificado1 from './assets/certificado-azure-fundamentals.png';
 import certificado2 from './assets/certificado-data-analyst.png';
@@ -34,7 +49,8 @@ export default function App() {
       </div>
       <iframe className='video-principal' src="https://www.youtube.com/embed/o8sgZAkJmr8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <div className='botao-hotmart'>
-        <a href='https://pay.hotmart.com/H68198125P?sck=HOTMART_PRODUCT_PAGE&off=xifp1ff4&hotfeature=32&_gl=1%2a1u3i0gi%2a_ga%2aNjczMTY2NTcwLjE2Nzg4MDIzOTA.%2a_ga_GQH2V1F11Q%2aMTY4NjgzNDMwNS40MC4wLjE2ODY4MzQzMDcuNTguMC4w&bid=1686834313220'><button type='button'>QUERO FAZER PARTE DO MUNDO DE DADOS</button></a>
+        <a href='https://pay.hotmart.com/H68198125P?sck=HOTMART_PRODUCT_PAGE&off=xifp1ff4&hotfeature=32&_gl=1%2a1u3i0gi%2a_ga%2aNjczMTY2NTcwLjE2Nzg4MDIzOTA.%2a_ga_GQH2V1F11Q%2aMTY4NjgzNDMwNS40MC4wLjE2ODY4MzQzMDcuNTguMC4w&bid=1686834313220'>
+        <button type='button'>QUERO FAZER PARTE DO MUNDO DE DADOS</button></a>
         <img src={pagamentos}/>
       </div>
       <div className='badges'>
@@ -69,27 +85,67 @@ export default function App() {
           <td>Exercícios do mundo real</td>
         </tr>
       </table>
-      <div className='carossel'>
-        <div className='carossel-item'>
-          <h2>Despertar da mina de ouro</h2>
-          <span>
-            <p>Universo dos dados</p>
-            <p>Onde eles estão, como se comportam, como posso me aproveitar desse momento da tecnologia?</p>
-          </span>
+      <Carousel/>
+      <div className='antes-depois'>
+        <div className='antes'>
+          <h2>Chega de analisar as informações assim</h2>
+          <div>
+            <img src={excel1}/>
+            <img src={excel2}/>
+          </div>
         </div>
-        <div className='carossel-item'>
-          <h2>Mineração estratégica</h2>
-          <span>
-            <p>Demandas urgentes</p>
-            <p>Como o mercado está se comportando com a nova era dos dados, qual perfil procuram, o que devo estudar para alcançar essas oportunidades?</p>
-          </span>
+        <div className='depois'>
+          <h2>E passe a analisar desta maneira</h2>
+          <div>
+            <img src={powerbi1}/>
+            <img src={powerbi2}/>
+          </div>
         </div>
-        <div className='carossel-item'>
-          <h2>Fundição do conhecimento</h2>
-          <span>
-            <p>Unindo experiências</p>
-            <p>Como usar todo meu aprendizado para aplicar no mundo dos dados?</p>
-          </span>
+      </div>
+      <div className='modulos'>
+        <div className='modulo'>
+          <img src={modulo1}/>
+          <p>MÓDULO 01</p>
+          <span></span>
+          <p>O QUE É BI E POWER BI</p>
+        </div>
+        <div className='modulo'>
+          <img src={modulo2}/>
+          <p>MÓDULO 02</p>
+          <span></span>
+          <p>SAIBA TRATAR O SEUS DADOS</p>
+        </div>
+        <div className='modulo'>
+          <img src={modulo3}/>
+          <p>MÓDULO 03</p>
+          <span></span>
+          <p>MODELAGEM DE DADOS</p>
+        </div>
+        <div className='modulo'>
+          <img src={modulo4}/>
+          <p>MÓDULO 04</p>
+          <span></span>
+          <p>KPIS NO DAX</p>
+        </div>
+        <div className='modulo'>
+          <img src={modulo5}/>
+          <p>MÓDULO 05</p>
+          <span></span>
+          <p>HORA DE IMPRESSIONAR COM OS GRÁFICOS</p>
+        </div>
+        <div className='modulo'>
+          <img src={modulo6}/>
+          <p>MÓDULO 06</p>
+          <span></span>
+          <p>TUDO SOBRE POWER BI SERVIÇO</p>
+        </div>
+        <div className='modulo modulo-bonus'>
+          <img src={moduloBonus}/>
+          <p>AULAS BÔNUS</p>
+        </div>
+        <div className='modulo modulo-bonus'>
+          <img src={moduloLives}/>
+          <p> LIVES TIRA DÚVIDAS</p>
         </div>
       </div>
       <div className='sobre-mim'>
@@ -113,7 +169,7 @@ export default function App() {
         <h1>Se está começando do zero:</h1>
         <p>Se você está começando do zero, não tem problema, este método tem como requisito um notebook e muita força de vontade, o resto deixa comigo.</p>
       </div>
-      <div className='bonus'>
+      <div className='bonus bonus2'>
         <h1>Se você já trabalha com dados</h1>
         <p>Se você já trabalha com dados no Excel, Power Point, está a pouquíssimos passos para entregar valor de verdade para a sua empresa, ser reconhecido não vai demorar muito tempo.</p>
       </div>

@@ -85,7 +85,7 @@ p{
 }
 
 .whatsapp img{
-  width: 50px;
+  width: 55px;
   transition: 0.2s ease-in;
 }
 
@@ -133,7 +133,7 @@ p{
   color: var(--white-color);
   padding: 2% 0;
   width: 50rem;
-  margin: 2.9rem 0 0.9rem 0;
+  margin: 3.5rem 0 0.9rem 0;
   font-size: var(--h2-font-size);
   font-weight: 800;
   border-radius: 10px;
@@ -156,7 +156,7 @@ p{
   max-width: 80%;
   display: flex;
   justify-content: space-around;
-  padding: 4% 0 2% 0;
+  padding: 6% 0 1% 0;
   gap: 2%;
 }
 
@@ -180,7 +180,7 @@ p{
 
 .tabela{
   border-collapse: collapse;
-  margin: 3% 0 5% 2%;
+  margin: 3% 0 8% 2%;
   width: 60%;
   text-align: center;
   background-color: #ffffff;
@@ -203,53 +203,94 @@ p{
   width: 110px;
 }
 
-.carossel{
+.antes-depois{
+  display: flex;
+  align-items: start;
+  padding: 9% 0;
+  width: 80%;
+}
+
+.antes, .depois{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.antes h2, .depois h2{
+  padding-bottom: 4%;
+}
+
+.antes div, .depois div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.antes div img, .depois div img{
+  width: 90%;
+  margin-bottom: 2%;
+  border-radius: 7px;
+}
+
+.antes div img{
+  margin-bottom: 6%;
+}
+
+.modulos{
+  width: 80%;
   display: flex;
   justify-content: space-evenly;
-  width: 80%;
+  flex-wrap: wrap;
+  gap: 2%;
 }
 
-.carossel-item{
-  width: 18rem;
-  height: 20rem;
-  background-color: var(--yellow-color);
-  border-radius: 12px;
-  padding: 1.7%;
-}
-
-.carossel-item h2{
-  width: 80%;
-  margin-left: 17%;
-  margin-bottom: 9%;
-}
-
-.carossel-item span p{
+.modulo{
   background-color: var(--container-color);
   color: var(--white-color);
-  padding: 5%;
-  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  padding: 2% 2%;
+  width: 17vw;
+  margin-bottom: 3%;
+  transition: 0.4s ease-in-out;
 }
 
-.carossel-item span p:first-child{
-  padding-bottom: 0;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  font-weight: 600;
+.modulo img{
+  margin-bottom: 0.3rem;
 }
 
-.carossel-item span p:last-child{
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  height: 9.5rem;
-  max-height: 9.5rem;
+.modulo span{
+  color: var(--container-color);
+  font-size: 1px;
+  width: 30%;
+  margin: 3% 0 4% 0;
+  border-bottom: 2px solid var(--yellow-color);
+}
+
+.modulo p:nth-child(4){
+  color: var(--yellow-color);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.modulo:hover{
+  transform: translateY(-4px);
+}
+
+.modulo-bonus{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sobre-mim{
   background-color: var(--container-color);
   display: flex;
   height: 80vh;
-  padding: 4% 4% 3% 6%;
-  margin: 6% 0 2% 0;
+  padding: 3% 4% 0 6%;
+  margin: 6% 0 5% 0;
 }
 
 .sobre-mim-texto{
@@ -283,7 +324,6 @@ p{
 }
 
 .lucas{
-  width: 29%;
   height: 100%;
 }
 
@@ -304,10 +344,15 @@ p{
   font-size: 1.2rem;
 }
 
+.bonus2{
+  margin-bottom: 2%;
+}
+
 .faq{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 3% 0 0 0;
 }
 
 .faq-item{
@@ -333,7 +378,7 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5% 0;
+  padding: 7% 0;
 }
 
 .discord img{
@@ -381,7 +426,7 @@ p{
 }
 
 .footer-contato a svg{
-  width: 1.8rem;
+  width: 1.9rem;
   height: 100%;
   color: var(--white-color);
 }
@@ -395,248 +440,9 @@ p{
 
 
 
-
-
 /* responsividade */
-@media screen and (max-width: 515px){
+/* @media screen and (max-width: 1550px){
   :root {
-    --h1-font-size: 1.3rem;
-    --h2-font-size: 0.9rem;
-    --h3-font-size: 0.7rem;
+    
   }
-
-  h1, h2, p{
-    text-align: center;
-  }
-
-  .body{
-    padding: 4% 5%;
-  }
-  
-  .logotipo-principal{
-    width: 25%;
-    padding-bottom: 3%;
-  }
-
-  .video-principal{
-    width: 310px;
-    height: 177px;
-    border-radius: 0.5rem;
-    margin: 4% 0;
-  }
-
-  .argumentos-convencimento{
-    width: 80%;
-    gap: 3%;
-  }
-  
-  .argumentos-convencimento div p{
-    text-align: center;
-  }
-
-  .pagamento p{
-    font-size: 1rem;
-  }
-
-  .pagamento div h2{
-    font-size: 1.8rem;
-    margin-right: 3%;
-  }
-
-  .pagamento div h1{
-    font-size: 2.5rem;
-  }
-
-  .botao-pagamento{
-    padding: 1% 10%;
-    border-radius: 0.3rem;
-  }
-  .span-pagamento{
-    font-size: 0.5rem;
-  }
-
-  .formas-pagamento{
-    margin-top: 0rem;
-    width: 40%;
-  }
-
-  .h1{
-    padding: 5% 0 1% 0;
-    width: 97%;
-  }
-
-  .h2{
-    width: 90%;
-  }
-
-  .relatos{
-    flex-direction: column;
-    width: 85%;
-    max-width: 85%;
-    padding-top: 6%;
-    margin-left: 6%;
-  }
-
-  .relato{
-    margin-bottom: 6%;
-  }
-  
-  .relato svg{
-    margin-right: 3%;
-  }
-
-  .relato div h2{
-    text-align: start;
-  }
-  
-  .relato div p{
-    width: 95%;
-    text-align: start;
-  }
-  .veiculos{
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 0 2%;
-  }
-  
-  .veiculo-1{
-    width: 100%;
-    max-width: 100%;
-    height: 30vh;
-    margin-bottom: 2%;
-  }
-  
-  .veiculos div{
-    width: 100%;
-    display: flex;
-    gap: 2%;
-  }
-  
-  .veiculo-2{
-    width: 49%;
-    height: 25vh;
-    margin-bottom: 0%;
-  }
-  
-  .veiculo-3{
-    width: 49%;
-    height: 25vh;
-  }
-  
-  .veiculo-4{
-    width: 100%;
-    max-width: 100%;
-    height: 20vh;
-    margin-top: 2%;
-  }
-
-  .argumento-logico{
-    width: 90%;
-  }
-  
-  .argumento-logico svg{
-    width: 60%;
-  }
-  
-  .argumento-logico h1{
-    width: 40%;
-    font-size: var(--h2-font-size);
-  }
-
-  .diagrama{
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .diagrama svg{
-    width: 45%;
-  }
-
-  .etapa-aprendizado{
-    width: 87%;
-    padding-top: 4%;
-  }
-  
-  .etapa-aprendizado svg{
-    width: 70%;
-    margin-right: 2%;
-  }
-
-  .etapa-aprendizado div h2, p{
-    text-align: start;
-  }
-
-  .garantia{
-    margin: 7% 0 3% 0;
-  }
-  
-  .garantia-h1{
-    padding: 4% 0 1% 0;
-    width: 80%;
-  }
-  
-  .garantia-p{
-    width: 75%;
-    text-align: center;
-  }
-
-  .bonus{
-    width: 87%;
-    padding-top: 4%;
-  }
-  
-  .bonus svg{
-    width: 70%;
-    margin-right: 2%;
-  }
-
-  .bonus div h2, p{
-    text-align: start;
-  }
-
-  .sobre-mim{
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .sobre-mim div{
-    align-items: center;
-  }
-
-  .sobre-mim-h1, .sobre-mim-p{
-    text-align: center;
-  }
-
-  .sobre-mim-p{
-    padding-bottom: 5%;
-  }
-
-  .lucas{
-    margin-left: 25%;
-    width: 50%;
-  }
-
-  .footer{
-    width: 100%;
-  }
-  
-  .footer-contato{
-    width: 30%;
-  }
-  
-  .footer-contato a{
-    margin-right: 4%;
-  }
-  
-  .footer-contato svg{
-    width: 0.9rem;
-  }
-  
-  .footer div:nth-child(2){
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-}
+} */
