@@ -1,0 +1,85 @@
+:root{
+    --body-font: "Poppins", sans-serif !important;
+  
+    --body-color: #f1f2f3;
+    --container-color: #232323;
+    --yellow-color: #ffa600;
+    --black-color: #232323;
+    --white-color: #f1f2f3;
+    --gray-color: #939393;
+  
+    --h1-font-size: 2.3rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.1rem;
+}
+
+.carossel{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.carossel-item{
+    width: 19rem;
+    height: 18.2rem;
+    background-color: var(--yellow-color);
+    border-radius: 12px;
+    padding: 5% 4% 0 4%;
+}
+
+.carossel-item h2{
+    width: 65%;
+    margin-left: 17%;
+    margin-bottom: 9%;
+    text-align: center;
+}
+
+.carossel-item div{
+    background-color: var(--container-color);
+    border-radius: 8px;
+}
+
+.carossel-item div p{
+    color: var(--white-color);
+    padding: 5% 5% 0 5%;
+    font-size: 1rem;
+}
+
+.carossel-item div p:first-child{
+    font-weight: 600;
+}
+  
+.carossel-item div p:last-child{
+    height: 7.6rem;
+    max-height: 7.6rem;
+    padding-top: 0;
+    font-size: 0.9rem;
+}
+
+.carossel button{
+    font-size: 25px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 265%;
+    left: 46%;
+    margin-top: 1rem;
+  }
+  
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel-dot.active {
+    background-color: var(--black-color);
+    transition: all 0.3s;
+  }
+  

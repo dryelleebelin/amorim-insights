@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './carossel.css';
+
+import { GrPrevious, GrNext } from 'react-icons/gr';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -21,19 +23,19 @@ const Carousel = () => {
       description: 'Como usar todo meu aprendizado para aplicar no mundo dos dados?',
     },
     {
-      title: 'teste1Despertar da mina de ouro',
-      subtitle: 'Universo dos dados',
-      description: 'Onde eles estão, como se comportam, como posso me aproveitar desse momento da tecnologia?',
+      title: 'Forjando a jóia',
+      subtitle: 'Qual ferramenta de mercado?',
+      description: 'Como usar a ferramenta para obter os resultados desejados?',
     },
     {
-      title: 'teste2Mineração estratégica',
-      subtitle: 'Demandas urgentes',
-      description: 'Como o mercado está se comportando com a nova era dos dados, qual perfil procuram, o que devo estudar para alcançar essas oportunidades?',
+      title: 'Polimento criativo',
+      subtitle: 'Um novo descobrimento',
+      description: 'Saquei a ideia, posso tirar muito proveito disso na minha carreira profissional.',
     },
     {
-      title: 'teste3Fundição do conhecimento',
-      subtitle: 'Unindo experiências',
-      description: 'Como usar todo meu aprendizado para aplicar no mundo dos dados?',
+      title: 'Exposição Exponencial',
+      subtitle: 'Insights valiosos',
+      description: 'Não imaginei que conseguiria fazer isso, me expondo ao mercado.',
     },
   ];
 
@@ -45,27 +47,48 @@ const Carousel = () => {
     setCurrentIndex((prevIndex) => (prevIndex === items.length - 1 ? 0 : prevIndex + 1));
   };
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextItem();
+    }, 3000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
   const renderItems = () => {
     const startIndex = currentIndex;
     const endIndex = (currentIndex + 2) % items.length;
     const indices = [startIndex, (startIndex + 1) % items.length, endIndex];
 
     return indices.map((index) => (
-      <div key={index} className="carossel-item">
-        <h2>{items[index].title}</h2>
-        <span>
-          <p>{items[index].subtitle}</p>
-          <p>{items[index].description}</p>
-        </span>
+      <div className='carossel'>
+        <div key={index} className="carossel-item">
+          <h2>{items[index].title}</h2>
+          <div>
+            <p>{items[index].subtitle}</p>
+            <p>{items[index].description}</p>
+          </div>
+        </div>
       </div>
     ));
   };
 
   return (
     <div className="carossel">
-      <button onClick={prevItem}>Anterior</button>
+      <button onClick={prevItem}><GrPrevious /></button>
       {renderItems()}
-      <button onClick={nextItem}>Próximo</button>
+      <button onClick={nextItem}><GrNext /></button>
+      <div className="carousel-dots">
+        {items.map((_, index) => (
+          <div
+            key={index}
+            className={`carousel-dot ${index === currentIndex ? 'active' : ''}`}
+            onClick={() => setCurrentIndex(index)}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 };

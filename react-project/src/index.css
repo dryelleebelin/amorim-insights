@@ -15,7 +15,7 @@
   background-color: #232323f1;
 }
 
-:root {
+:root{
   --body-font: "Poppins", sans-serif !important;
 
   --body-color: #f1f2f3;
@@ -206,7 +206,7 @@ p{
 .antes-depois{
   display: flex;
   align-items: start;
-  padding: 9% 0;
+  padding: 9% 0 8% 0;
   width: 80%;
 }
 
@@ -234,6 +234,11 @@ p{
 
 .antes div img{
   margin-bottom: 6%;
+}
+
+.modulos-h1{
+  padding: 0 0 3% 0;
+  width: 80%;
 }
 
 .modulos{
@@ -440,9 +445,9 @@ p{
 
 
 
-/* responsividade */
-/* @media screen and (max-width: 1550px){
-  :root {
-    
+/* responsividade pc*/
+@media screen and (max-width: 1550px){
+  .tabela tr th svg{
+    left: 423px;
   }
-} */
+}

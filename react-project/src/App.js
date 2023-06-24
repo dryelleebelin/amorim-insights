@@ -14,7 +14,7 @@ import { TbCircleNumber1,TbCircleNumber2, TbCircleNumber3, TbCircleNumber4, TbCi
 import { IoClose } from 'react-icons/io5';
 import whatsapp from './assets/whatsapp.png';
 import discord from './assets/discord.png';
-// import videoDiscord from './assets/video-discord.mp4';
+import videoDiscord from './assets/video-discord.mp4';
 
 import excel1 from './assets/Excel 1.png';
 import excel2 from './assets/Excel 2.png';
@@ -102,6 +102,7 @@ export default function App() {
           </div>
         </div>
       </div>
+      <h1 className='modulos-h1'>Conheça um pouco do conteúdo que você vai aprender!</h1>
       <div className='modulos'>
         <div className='modulo'>
           <img src={modulo1}/>
@@ -218,9 +219,9 @@ export default function App() {
       <div className='discord'>
         <img src={discord}/>
         <h2>Suporte como você nunca viu em nenhum curso.</h2>
-        {/* <video autoPlay muted loop>
+        <video autoPlay muted loop>
           <source src={videoDiscord} type="video/mp4"/>
-        </video> */}
+        </video>
       </div>
       <div className='footer'>
         <img src={logotipoAmarelo}/>
