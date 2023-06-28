@@ -1,5 +1,7 @@
 import './index.css';
 import Carousel from './Carousel';
+import React, { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
 
 import logotipoPrincipal from './assets/logotipo-principal.png';
 import lucas from './assets/lucas-removebg.png';
@@ -9,10 +11,12 @@ import logotipoAmarelo from './assets/logotipo-amarelo.png';
 
 import { FaAward, FaVideo } from 'react-icons/fa';
 import { RiTimerFlashFill } from 'react-icons/ri';
-import { BsWhatsapp, BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs';
 import { TbCircleNumber1,TbCircleNumber2, TbCircleNumber3, TbCircleNumber4, TbCircleNumber5 } from 'react-icons/tb';
 import { IoClose } from 'react-icons/io5';
 import whatsapp from './assets/whatsapp.png';
+import instagram from './assets/instagram.png';
+import linkedin from './assets/linkedin.png';
+import youtube from './assets/youtube.png';
 import discord from './assets/discord.png';
 import videoDiscord from './assets/video-discord.mp4';
 
@@ -37,6 +41,20 @@ import certificado4 from './assets/certificado-microsoft-certified-trainer.png';
 import certificado5 from './assets/certificado-power-fundamentals.png';
 
 export default function App() {
+  const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 1500,
+    delay: 300,
+  })
+
+  useEffect(() => {
+    sr.reveal('.badges, .tabela, .modulos-h1, .modulo, .bonus');
+    sr.reveal(`.discord`, {origin: 'bottom'})
+    sr.reveal(`.sobre-mim-texto`, {origin: 'left'})
+    sr.reveal(`.lucas`, {origin: 'right'})
+  }, []);
+
   return (
     <div className='body'>
       <a className='whatsapp' href='https://api.whatsapp.com/send?phone=5511964518005'>
@@ -47,7 +65,7 @@ export default function App() {
         <h2>Entre para a área que mais cresce nos últimos anos!</h2>
         <p>Entenda por que tanta gente comum está mudando de vida, ganhando mais dinheiro e automatizando suas tarefas na empresa.</p>
       </div>
-      <iframe className='video-principal' src="https://www.youtube.com/embed/o8sgZAkJmr8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe className='video-principal' src="https://www.youtube.com/embed/6ZQuWfH7XnA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <div className='botao-hotmart'>
         <a href='https://pay.hotmart.com/H68198125P?sck=HOTMART_PRODUCT_PAGE&off=xifp1ff4&hotfeature=32&_gl=1%2a1u3i0gi%2a_ga%2aNjczMTY2NTcwLjE2Nzg4MDIzOTA.%2a_ga_GQH2V1F11Q%2aMTY4NjgzNDMwNS40MC4wLjE2ODY4MzQzMDcuNTguMC4w&bid=1686834313220'>
         <button type='button'>QUERO FAZER PARTE DO MUNDO DE DADOS</button></a>
@@ -174,7 +192,7 @@ export default function App() {
         <h1>Se você já trabalha com dados</h1>
         <p>Se você já trabalha com dados no Excel, Power Point, está a pouquíssimos passos para entregar valor de verdade para a sua empresa, ser reconhecido não vai demorar muito tempo.</p>
       </div>
-      <div className='botao-hotmart'>
+      <div className='botao-hotmart botao-hotmart-2'>
         <a href='https://pay.hotmart.com/H68198125P?sck=HOTMART_PRODUCT_PAGE&off=xifp1ff4&hotfeature=32&_gl=1%2a1u3i0gi%2a_ga%2aNjczMTY2NTcwLjE2Nzg4MDIzOTA.%2a_ga_GQH2V1F11Q%2aMTY4NjgzNDMwNS40MC4wLjE2ODY4MzQzMDcuNTguMC4w&bid=1686834313220'><button type='button'>QUERO FAZER PARTE DO MUNDO DE DADOS</button></a>
         <img src={pagamentos}/>
       </div>
@@ -226,10 +244,10 @@ export default function App() {
       <div className='footer'>
         <img src={logotipoAmarelo}/>
         <div className='footer-contato'>
-          <a href='https://api.whatsapp.com/send?phone=5511964518005'><BsWhatsapp/></a>
-          <a href='https://www.instagram.com/dados.amorim/'><BsInstagram/></a>
-          <a href='https://www.linkedin.com/in/lucas-amorim-12885a118/'><BsLinkedin/></a>
-          <a href='https://www.youtube.com/channel/UCgnPfc_2XXV4UYctKQSmcOg'><BsYoutube/></a>
+          <a href='https://api.whatsapp.com/send?phone=5511964518005'><img src={whatsapp}/></a>
+          <a href='https://www.instagram.com/dados.amorim/'><img src={instagram}/></a>
+          <a href='https://www.linkedin.com/in/lucas-amorim-12885a118/'><img src={linkedin}/></a>
+          <a href='https://www.youtube.com/channel/UCgnPfc_2XXV4UYctKQSmcOg'><img src={youtube}/></a>
         </div>
         <p>&#169; 2023 Todos os direitos reservados</p>
       </div>

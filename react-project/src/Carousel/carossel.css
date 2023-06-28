@@ -67,19 +67,55 @@
     top: 265%;
     left: 46%;
     margin-top: 1rem;
-  }
+}
   
-  .carousel-dot {
+.carousel-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: #ccc;
     margin: 0 5px;
     cursor: pointer;
-  }
+}
   
-  .carousel-dot.active {
+.carousel-dot.active {
     background-color: var(--black-color);
     transition: all 0.3s;
-  }
+}
   
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1500px){
+    .carossel{
+        width: 78%;
+    }
+    .carousel-dots { 
+        margin-top: 3rem;
+      }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 576px){
+.carousel-dots {
+    top: 164%;
+    left: 41%;
+}
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+}
+}

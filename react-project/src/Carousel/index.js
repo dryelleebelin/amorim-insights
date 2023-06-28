@@ -5,6 +5,7 @@ import { GrPrevious, GrNext } from 'react-icons/gr';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isResponsive, setIsResponsive] = useState(false);
 
   const items = [
     {
@@ -48,23 +49,41 @@ const Carousel = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      nextItem();
-    }, 3000);
+    const handleResize = () => {
+      setIsResponsive(window.innerWidth <= 576);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      clearInterval(timer);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   const renderItems = () => {
+    if (isResponsive) {
+      return (
+        <div className='carossel'>
+          <div className="carossel-item">
+            <h2>{items[currentIndex].title}</h2>
+            <div>
+              <p>{items[currentIndex].subtitle}</p>
+              <p>{items[currentIndex].description}</p>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     const startIndex = currentIndex;
     const endIndex = (currentIndex + 2) % items.length;
     const indices = [startIndex, (startIndex + 1) % items.length, endIndex];
 
     return indices.map((index) => (
-      <div className='carossel'>
-        <div key={index} className="carossel-item">
+      <div className='carossel' key={index}>
+        <div className="carossel-item">
           <h2>{items[index].title}</h2>
           <div>
             <p>{items[index].subtitle}</p>
