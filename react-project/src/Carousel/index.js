@@ -50,7 +50,7 @@ const Carousel = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsResponsive(window.innerWidth <= 576);
+      setIsResponsive(window.innerWidth <= 770);
     };
 
     handleResize();
@@ -96,9 +96,11 @@ const Carousel = () => {
 
   return (
     <div className="carossel">
-      <button onClick={prevItem}><GrPrevious /></button>
-      {renderItems()}
-      <button onClick={nextItem}><GrNext /></button>
+      <div className="carossel2">
+        <button onClick={prevItem}><GrPrevious /></button>
+        {renderItems()}
+        <button onClick={nextItem}><GrNext /></button>
+      </div>
       <div className="carousel-dots">
         {items.map((_, index) => (
           <div

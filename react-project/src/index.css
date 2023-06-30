@@ -7,12 +7,12 @@
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: #232323dd;
+  background-color: #232323be;
   border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-  background-color: #232323f1;
+  background-color: #232323d7;
 }
 
 :root{
@@ -103,23 +103,27 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 3%;
+  padding-bottom: 2%;
 }
 
 .headline h2{
   font-size: 1.9rem;
+  font-weight: 700;
+  width: 80%;
+  text-align: center;
 }
 
 .headline p{
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: 500;
   width: 80%;
   text-align: center;
 }
 
 .video-principal{
-  width: 75vw;
-  height: 82vh;
-  border-radius: 1rem;
+  width: 55vw;
+  height: 63vh;
+  border-radius: 0.8rem;
 }
 
 .botao-hotmart{
@@ -133,8 +137,9 @@ p{
   background-color: #46b21e;
   color: var(--white-color);
   padding: 2% 0;
-  width: 50rem;
-  margin: 3.5rem 0 0.9rem 0;
+  width: 55vw;
+  margin: 2.5rem 0 0.9rem 0;
+  letter-spacing: 1.5px;
   font-size: var(--h2-font-size);
   font-weight: 800;
   border-radius: 10px;
@@ -154,10 +159,9 @@ p{
 
 .badges{
   width: 57%;
-  max-width: 80%;
   display: flex;
   justify-content: space-around;
-  padding: 6% 0 1% 0;
+  padding: 4% 0 1% 0;
   gap: 2%;
 }
 
@@ -181,7 +185,7 @@ p{
 
 .tabela{
   border-collapse: collapse;
-  margin: 3% 0 8% 2%;
+  margin: 4% 0 6% 2%;
   width: 60%;
   text-align: center;
   background-color: #ffffff;
@@ -192,12 +196,10 @@ p{
   padding: 8px;
 }
 
-.tabela tr th svg{
-  width: 40px;
-  height: 25px;
+.tabela tr th strong{
   color: #ff0000 !important;
-  position: absolute;
-  left: 11%;
+  margin-right: 2%;
+  font-size: 1.2rem
 }
 
 .tabela img{
@@ -207,8 +209,8 @@ p{
 .antes-depois{
   display: flex;
   align-items: start;
-  padding: 9% 0 8% 0;
-  width: 80%;
+  padding: 7% 0 6% 0;
+  width: 85%;
 }
 
 .antes, .depois{
@@ -219,6 +221,7 @@ p{
 
 .antes h2, .depois h2{
   padding-bottom: 4%;
+  text-align: center;
 }
 
 .antes div, .depois div{
@@ -264,14 +267,14 @@ p{
 }
 
 .modulo img{
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .modulo span{
   color: var(--container-color);
   font-size: 1px;
   width: 30%;
-  margin: 3% 0 4% 0;
+  margin: 0 0 8% 0;
   border-bottom: 2px solid var(--yellow-color);
 }
 
@@ -282,19 +285,20 @@ p{
 }
 
 .modulo:hover{
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 .modulo-bonus{
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .sobre-mim{
   background-color: var(--container-color);
   display: flex;
-  height: 80vh;
+  height: 100%;
   padding: 3% 4% 0 6%;
   margin: 6% 0 5% 0;
 }
@@ -306,7 +310,7 @@ p{
 }
 
 .sobre-mim-texto h1{
-  width: 70%;
+  width: 80%;
   text-align: start;
   padding: 0;
   color: var(--yellow-color) !important;
@@ -420,6 +424,7 @@ p{
   display: flex;
   align-items: center;
   gap: 6%;
+  padding-left: 18%;
 }
 
 .footer-contato a{
@@ -432,12 +437,12 @@ p{
 }
 
 .footer-contato a img{
-  width: 2.1rem;
+  width: 2.3rem;
   height: 100%;
 }
 
-.footer div:nth-child(3){
-  text-align: end;
+.footer p{
+  margin-bottom: 0;
 }
 
 
@@ -453,17 +458,33 @@ p{
 
 
 
+@media screen and (min-width: 1500px){
+  .modulo span{
+    border-bottom: 3px solid var(--yellow-color) !important;
+  }
+  .sobre-mim-texto p{
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1600px){
+  .sobre-mim-texto p{
+    font-size: 1.3rem;
+  }
+  .certificados img{
+    width: 8% !important;
+  }
+}
 
 
-
-@media screen and (max-width: 576px){
+@media screen and (max-width: 770px){
   :root{
     --h1-font-size: 1.5rem !important;
   }
+  
   .body{
     padding: 4% 0 0 0;
   }
-
 
   .whatsapp{
     display: none;
