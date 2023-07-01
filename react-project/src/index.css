@@ -136,7 +136,7 @@ p{
 .botao-hotmart button{
   background-color: #46b21e;
   color: var(--white-color);
-  padding: 2% 0;
+  padding: 2% 2%;
   width: 55vw;
   margin: 2.5rem 0 0.9rem 0;
   letter-spacing: 1.5px;
@@ -452,10 +452,50 @@ p{
 
 
 
+@media screen and (max-width: 920px){
+  .video-principal{
+    height: 41vh !important;
+  }
+}
 
+@media screen and (max-width: 690px){
+  .video-principal{
+    height: 39vh !important;
+  }
+}
 
+@media screen and (max-width: 630px){
+  .video-principal{
+    height: 36vh !important;
+  }
+}
 
+@media screen and (max-width: 590px){
+  .video-principal{
+    height: 34vh !important;
+  }
+}
 
+@media screen and (max-width: 555px){
+  .video-principal{
+    height: 32vh !important;
+  }
+}
+
+@media screen and (max-width: 504px){
+  .video-principal{
+    height: 29vh !important;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .video-principal{
+    height: 26vh !important;
+  }
+  .footer p{
+    margin-left: 22% !important;
+  }
+}
 
 
 @media screen and (min-width: 1500px){
@@ -477,11 +517,8 @@ p{
 }
 
 
-@media screen and (max-width: 770px){
-  :root{
-    --h1-font-size: 1.5rem !important;
-  }
-  
+@media screen and (max-width: 1150px){
+
   .body{
     padding: 4% 0 0 0;
   }
@@ -492,12 +529,7 @@ p{
 
   .logotipo-principal{
     width: 30%;
-    padding-bottom: 4%;
-  }
-
-  .headline{
-    padding-bottom: 2%;
-    text-align: center;
+    padding-bottom: 3%;
   }
 
   .headline h2{
@@ -507,35 +539,34 @@ p{
 
   .headline p{
     font-size: 0.9rem;
-    width: 90%;
+    width: 80%;
   }
 
   .video-principal{
-    width: 85vw;
-    height: 22vh;
-    border-radius: 0.7rem;
+    width: 70vw;
+    height: 21vh;
+    border-radius: 0.6rem;
   }
 
   .botao-hotmart button{
-    width: 15rem;
-    margin: 1.8rem 0 0.5rem 0;
+    width: 70vw;
     font-size: 1rem;
   }
+
   .botao-hotmart img{
     width: 48%;
   }
   
   .badges{
     width: 75%;
-    max-width: 75%;
   }
 
   .badges div:first-child{
-    width: 50%;
+    width: 37%;
   }
 
   .badges div svg{
-    width: 28%;
+    width: 25%;
   }
 
   .badges div p{
@@ -546,7 +577,6 @@ p{
   .tabela{
     margin: 2% 0 8% 2%;
     width: 75%;
-    font-size: 0.9rem;
   }
 
   .tabela th, td{
@@ -573,15 +603,14 @@ p{
   }
 
   .modulos{
-    width: 95%;
-    flex-wrap: wrap;
-    gap: 1%;
+    width: 90%;
+    gap: 0;
   }
 
   .modulo{
     border-radius: 10px;
-    width: 40%;
-    margin-bottom: 5%;
+    width: 38%;
+    margin-bottom: 4%;
   }
 
   .modulo img{
@@ -593,17 +622,12 @@ p{
   }
 
   .modulo span{
-    width: 30%;
-    margin: -8% 0 6% 0;
+    margin: -4% 0 6% 0;
   }
 
   .modulo p:nth-child(4){
     width: 90%;
     font-size: 0.9rem;
-  }
-
-  .modulo-bonus{
-    text-align: center;
   }
 
   .modulo-bonus img{
@@ -620,15 +644,17 @@ p{
     flex-direction: column;
     height: 100%;
     width: 100%;
-    padding: 7% 5% 0 5%;
+    padding: 5% 5% 0 5%;
   }
 
   .sobre-mim-texto{
     width: 100%;
+    text-align: center;
   }
 
   .sobre-mim-texto h1{
     width: 100%;
+    text-align: center;
   }
 
   .sobre-mim-texto p{
@@ -638,8 +664,10 @@ p{
   }
     
   .certificados{
-    margin: 0 0 10% 0;
+    margin: 4% 0 8% 0;
     gap: 3%;
+    align-items: center;
+    justify-content: center;
   }
 
   .certificados img{
@@ -647,13 +675,12 @@ p{
   }
 
   .lucas{
-    height: 40%;
-    width: 80%;
-    margin-left: 10%;
+    width: 60%;
+    margin-left: 20%;
   }
 
   .bonus{
-    margin: 4% 0;
+    margin: 3% 0;
   }
 
   .bonus h1{
@@ -666,11 +693,11 @@ p{
   }
 
   .bonus2{
-    margin-bottom: 2%;
+    margin-bottom: 0;
   }
 
   .botao-hotmart-2 button{
-    margin: 8% 0 !important;
+    margin-top: 7%;
   }
   
   .faq{
@@ -682,14 +709,14 @@ p{
   }
 
   .faq-item{
-    width: 85%;
+    width: 80%;
     margin-left: 0;
     align-items: flex-start;
   }
 
   .faq-item svg{
     width: 20%;
-    margin-right: 4%;
+    margin-right: 3%;
   }
 
   .faq-item div{
@@ -705,7 +732,7 @@ p{
   }
 
   .discord img{
-    width: 35%;
+    width: 30%;
   }
 
   .discord h2{

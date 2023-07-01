@@ -50,7 +50,7 @@ const Carousel = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsResponsive(window.innerWidth <= 770);
+      setIsResponsive(window.innerWidth <= 1150);
     };
 
     handleResize();

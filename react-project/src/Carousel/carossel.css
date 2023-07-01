@@ -66,6 +66,7 @@
 
 .carossel button{
     font-size: 25px;
+    background-color: #f1f2f3;
 }
 
 .carousel-dots {
@@ -89,15 +90,44 @@
 }
   
 
-
-
-
-
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1150px){
     .carossel{
-        width: 95% !important;
+        width: 55% !important;
     }
 }
+
+
+@media screen and (max-width: 770px){
+    .carossel{
+        width: 65% !important;
+    }
+}
+  
+@media screen and (max-width: 650px){
+    .carossel{
+        width: 68% !important;
+    }
+}
+  
+@media screen and (max-width: 590px){
+    .carossel{
+        width: 73% !important;
+    }
+}
+  
+@media screen and (max-width: 520px){
+    .carossel{
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .carossel{
+        width: 90% !important;
+    }
+}
+
+
 
 @media screen and (max-width: 1300px){
     .carossel{
